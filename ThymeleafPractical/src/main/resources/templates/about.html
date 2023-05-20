@@ -12,7 +12,7 @@
 		<h1>Name of the owner    is <div th:text="${name}"></div></h1>
 		<div th:with="a=5,b=6,n=${name}">
 			<!-- These a ba nd n values are applicable within this div. -->
-			<h1>Whos is the owner <span th:text="${b}+' dollars belongs to'+${name}"></span></h1>
+			<h1>Whos is the owner <span th:text="${b}+' dollars belongs to MR.'+${name}"></span></h1>
 		</div>
 </body>
 </html>
