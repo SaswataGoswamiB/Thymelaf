@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Itrertaing over Collection</title>
+</head>
+<body>
+	<h1 th:text="${name}"></h1>
+	<h1>Now we are iterating via Thymeleaf</h1>
+	<ul>
+		<li th:each="n,status:${name}">
+		<span th:text="${n}"></span>
+		<span th:text="${status.index}+' '+${status.count}+' '+${status.size}"></span>
+		<!-- 
+			Status gives info about the index.
+			Following attributes of status :
+			
+			index:The current itertaion index,starting with zero.
+			count:The no of eemnts Processed so far.
+			sizee:The total no of elements in the list.
+			odd/even :che check if the current index is odd/even
+		 -->
+		 <span th:style="${status.odd}?'color:red':''"></span>
+		</li>
+	</ul>
+	
+</body>
+</html>

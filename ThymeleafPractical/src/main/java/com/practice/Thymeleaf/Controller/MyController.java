@@ -1,6 +1,7 @@
 package com.practice.Thymeleaf.Controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,5 +18,15 @@ public class MyController {
 		model.addAttribute("Date",new Date());
 		return "about";
 	}
+	
+	//handle Iteration.
+	@GetMapping(value = "/iteration")
+	public String itertaion(Model model) 
+	{
+		List<String>nameList=List.of("Saswata","Goswami","Arpita","Biswas");
+		model.addAttribute("name", nameList);
+		return "iteration";
+	}
+	
 
 }
