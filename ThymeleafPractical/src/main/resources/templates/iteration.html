@@ -8,10 +8,9 @@
 	<h1 th:text="${name}"></h1>
 	<h1>Now we are iterating via Thymeleaf</h1>
 	<ul>
-		<li th:each="n,status:${name}">
-		<span th:text="${n}"></span>
-		<span th:text="${status.index}+' '+${status.count}+' '+${status.size}"></span>
-		<!-- 
+		<li th:each="n,status:${name}"><span th:text="${n}"></span> <span
+			th:text="${status.index}+' '+${status.count}+' '+${status.size}"></span>
+			<!-- 
 			Status gives info about the index.
 			Following attributes of status :
 			
@@ -19,10 +18,32 @@
 			count:The no of eemnts Processed so far.
 			sizee:The total no of elements in the list.
 			odd/even :che check if the current index is odd/even
-		 -->
-		 <span th:style="${status.odd}?'color:red':''"></span>
-		</li>
+		 --> <span th:style="${status.odd}?'color:red':''"></span></li>
 	</ul>
+
+	<h2 th:each="n:${name}">
+		<span th:text="${n}"></span>
+	</h2>
+
+
+<h1>Starting a new Line</h1>
+
+	<h2 th:each="n:${name}" th:text="${n}"></h2>
+
+	<!-- 
 	
+	<body>
+		
+			<ul>
+				<li th:each="n:${name}">
+					<span></span>
+				</li>
+			</ul>
+	</body>
+	
+	 -->
+
+
+
 </body>
 </html>
