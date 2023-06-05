@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>THis is the service</h1>
+	<!-- Going to add footer using fragments -->
+	
+	<!-- <footer id="Hosttag" th:replace="footer::footer1"> -->
+	
+	<!-- <footer id="Hosttag" th:insert="footer::footer1"> -->
+	
+	<footer id="Hosttag" th:insert="footer::footer1(${title},${subtitle})">
+	
+	<!-- <footer id="Hosttag" th:include="footer::footer1"> -->
+	
+	</footer>
+</body>
+</html>
