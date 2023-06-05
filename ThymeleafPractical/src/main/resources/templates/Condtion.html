@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Adding Condition in Thymeleaf</title>
+</head>
+<body>
+	<!-- Elvis operator or Ternary Operator -->
+	<h1 th:style="${active}?'color:green':'color:red'" 
+	th:text="${active}?'Active':'InActive'"></h1>
+	
+	<!-- If else Condition -->
+	
+	<h1 th:if="${Male}=='M'" th:style="'color:green'">Male</h1>
+	
+	<!-- Switch Case -->
+	<div th:switch="${#Lists.size(list)}">
+		<h1 th:case="'0'">List has 0 elememts</h1>
+		<h1 th:case="'2'">List has 2 elememts</h1>
+		<h1 th:case="'1'">List has 1 elememts</h1>
+		
+	</div>
+	
+</body>
+</html>
