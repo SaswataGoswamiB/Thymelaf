@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+th:fragment="Layout(content)">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Base Html</title>
+</head>
+<body>
+
+	<h1>This is the Common Part</h1>
+	<h2>Saswata Goswami:</h2>
+	
+	<div th:replace="${content}"></div>
+</body>
+</html>

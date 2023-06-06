@@ -46,5 +46,13 @@ public class MyController {
 		m.addAttribute("Subtitle","This is the Subtitile");
 		return "service";
 	}
+	
+	
+	//handling the Inheritance of Thymeleaf Tmeplate
+	@GetMapping(value="/inherit")
+	public String inheritance() 
+	{
+		return "Contact";
+	}
 
 }
