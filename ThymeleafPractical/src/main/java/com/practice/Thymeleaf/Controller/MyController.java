@@ -54,5 +54,11 @@ public class MyController {
 	{
 		return "Contact";
 	}
+	
+	@GetMapping(value="/example")
+	public String example() 
+	{
+		return "example";
+	}
 
 }
